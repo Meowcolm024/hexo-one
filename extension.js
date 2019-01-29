@@ -21,7 +21,7 @@ function activate(context) {
 		// The code you place here will be executed every time your command is executed
 		runCmd('hexo clean \n hexo g \n hexo d');
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hexo Pushed');
+		vscode.window.showInformationMessage('Deploying Hexo, please wait...');
 	});
 
 	context.subscriptions.push(disposable);
@@ -32,7 +32,7 @@ exports.activate = activate;
 function deactivate() {}
 
 function runCmd(cmd) {
-	const {workspace} = require('vscode')
+	const {workspace} = require('vscode');
 	const options = {
         cwd: workspace.rootPath,
         env: process.env
