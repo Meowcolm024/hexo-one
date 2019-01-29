@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "One click for hexo",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "Meowcolm024",
 	"repository": "https://meowcolm024.visualstudio.com/DefaultCollection/VSCode%20Extension/_git/VSCode%20Extension",
 	"engines": {
@@ -12,13 +12,13 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:hexo-one.pushHexo"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
+				"command": "hexo-one.pushHexo",
 				"title": "Push Hexo"
 			}
 		]

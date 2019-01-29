@@ -4,6 +4,6 @@ A simple extension for easier __Hexo__ usage.
 
 ## Features
 
-Execute hexo commands "clean" "generate" and "deploy"
+It will execute hexo commands "clean" "generate" and "deploy"
 
-Press ```command + shift + P``` then instert ```Push Hexo```
+Press ```Ctrl/Cmd + shift + P``` then instert ```Push Hexo```
