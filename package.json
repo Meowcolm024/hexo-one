@@ -2,12 +2,12 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "One click for hexo",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://meowcolm024.visualstudio.com/DefaultCollection/VSCode%20Extension/_git/VSCode%20Extension"
+		"url": "https://meowcolm024.visualstudio.com/DefaultCollection/VSCode%20Extension/_git/hexo-one"
 	},
 	"engines": {
 		"vscode": "^1.30.0"
@@ -24,6 +24,12 @@
 			{
 				"command": "hexo-one.pushHexo",
 				"title": "Push Hexo"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "hexo-one.pushHexo",
+				"key": "ctrl+p ctrl+h"
 			}
 		]
 	},
