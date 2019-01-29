@@ -4,6 +4,7 @@
 	"description": "One click for hexo",
 	"version": "0.0.1",
 	"publisher": "Meowcolm024",
+	"repository": "https://meowcolm024.visualstudio.com/DefaultCollection/VSCode%20Extension/_git/VSCode%20Extension",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
