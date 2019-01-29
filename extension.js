@@ -1,7 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-//import { workspace as Workspace } from 'vscode';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -39,7 +38,6 @@ function runCmd(cmd) {
         env: process.env
     }
 	const { exec } = require('child_process');
-		//exec(cmd, options);
 		exec(cmd, options, (err, stdout, stderr) => {
 			if(err) {
 				console.log(err);
