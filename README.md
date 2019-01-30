@@ -7,20 +7,18 @@ A simple extension for easier __Hexo__ usage. Allowing users to
 
 It just makes life easier :)
 
-## Useage
+## Features
 
-Press ```Ctrl/Cmd + shift + P``` then instert ```Push Hexo```
+1. __Create New Post__: Press ```command + shift + P``` then instert ```New Hexo Post``` or simply using short cut ```control + N + P```. Then a prompt would show up and just type the title of post.
 
-Or use shortcut: ```Ctrl + P + H``` (Press __control__ while pressing __P__ and __H__ in sequence)
-
-It will execute hexo commands "clean" "generate" and "deploy".
+2. __Clean, Generate and Deploy your Hexo__: Press ```command + shift + P``` then instert ```Push Hexo``` or use short cut ```control + P + H```.
 
 ## TODO List
 
-* a feature of adding new post may be added
+* (Nothing right now)
 
 ## Source and Bug report
 
 [Github](https://github.com/Meowcolm024/hexo-one) : just report bugs here
 
-[Azure](https://meowcolm024.visualstudio.com/VSCode%20Extension/_git/hexo-one)
+[Azure](https://meowcolm024.visualstudio.com/VSCode%20Extension/_git/hexo-one) : things also stores here

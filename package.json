@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
 	"repository": {
@@ -16,7 +16,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:hexo-one.pushHexo"
+		"onCommand:hexo-one.pushHexo",
+		"onCommand:hexo-one.newPost"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -24,12 +25,20 @@
 			{
 				"command": "hexo-one.pushHexo",
 				"title": "Push Hexo"
+			},
+			{
+				"command": "hexo-one.newPost",
+				"title": "New Hexo Post"
 			}
 		],
 		"keybindings": [
 			{
 				"command": "hexo-one.pushHexo",
 				"key": "ctrl+p ctrl+h"
+			},
+			{
+				"command": "hexo-one.newPost",
+				"key": "ctrl+n ctrl+p"
 			}
 		]
 	},

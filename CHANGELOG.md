@@ -5,7 +5,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Getting ready for the "New Post" part
+- No idea
+
+## [0.0.5]
+### Added
+
+- Now you can create new post easily using command ```New Hexo Post```
 
 ## [0.0.4]
 ### Added

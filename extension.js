@@ -24,7 +24,25 @@ function activate(context) {
 		vscode.window.showInformationMessage('Deploying Hexo, please wait...');
 	});
 
+	let disposable2 = vscode.commands.registerCommand('hexo-one.newPost', function() {
+		const options = {
+			ignoreFocusOut: true,
+			password: false,
+			prompt: "Please type the title of your post"
+			};
+
+		vscode.window.showInputBox(options).then((value) => {
+			if (value === undefined || value.trim() === '') {
+			vscode.window.showInformationMessage('Please type the title of your post');
+			}else{
+				const title = value.trim();
+				const cmd = "hexo new \"" + title + "\""
+				runCmd(cmd);
+			}});
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable2);
 }
 exports.activate = activate;
 
