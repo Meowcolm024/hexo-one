@@ -7,6 +7,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - No idea
 
+## [0.0.6]
+### Changed
+
+- Added an icon and changed some code.
+
 ## [0.0.5]
 ### Added
 
