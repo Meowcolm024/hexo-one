@@ -5,7 +5,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- No idea
+- Able to publish draft
+
+## [0.0.7]
+### Changed
+
+- Now you can create draft using ```New Hexo Draft```
 
 ## [0.0.6]
 ### Changed

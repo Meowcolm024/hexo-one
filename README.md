@@ -11,11 +11,13 @@ It just makes life easier :)
 
 1. __Create New Post__: Press ```command + shift + P``` then instert ```New Hexo Post``` or simply using short cut ```control + N + P```. Then a prompt would show up and just type the title of post.
 
-2. __Clean, Generate and Deploy your Hexo__: Press ```command + shift + P``` then instert ```Push Hexo``` or use short cut ```control + P + H```.
+2. __Create New Draft__: Press ```command + shift + P``` then instert ```New Hexo Draft``` or use short cut ```control + N + D```. Then type the title of draft.
+
+3. __Clean, Generate and Deploy your Hexo__: Press ```command + shift + P``` then instert ```Push Hexo``` or use short cut ```control + P + H```.
 
 ## TODO List
 
-* (Nothing right now)
+* add function of publishing drafts
 
 ## Source and Bug report
 
