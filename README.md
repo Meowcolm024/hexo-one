@@ -1,5 +1,10 @@
 # hexo-one
 
+![GitHub](https://img.shields.io/github/license/Meowcolm024/hexo-one)
+![GitHub issues](https://img.shields.io/github/issues/Meowcolm024/hexo-one)
+
+[![Build Status](https://meowcolm024.visualstudio.com/VSCode%20Extension/_apis/build/status/hexo-one?branchName=master)](https://meowcolm024.visualstudio.com/VSCode%20Extension/_build/latest?definitionId=2&branchName=master)
+
 Download the extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=Meowcolm024.hexo-one)
 
 A simple extension for easier __Hexo__ usage. Allowing users to
@@ -32,3 +37,5 @@ Press ```command + shift + P``` to:
 ## Source and Bug report
 
 [Github](https://github.com/Meowcolm024/hexo-one) or [Azure](https://meowcolm024.visualstudio.com/VSCode%20Extension/_git/hexo-one)
+
+**PS: badges are just for fun :)**
