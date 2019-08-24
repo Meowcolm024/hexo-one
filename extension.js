@@ -24,30 +24,49 @@ function activate(context) {
 		vscode.window.showInformationMessage('Deploying Hexo, please wait...');
 	});
 
+	let newDraft = vscode.commands.registerCommand('hexo-one.newDraft', function() {
+		runPrompt(
+			"Please type the title of your draft",
+			'Please type the title of your draft',
+			"hexo new draft \"",
+			'Creating new draft: \"'
+		)
+	});
+
 	let newPost = vscode.commands.registerCommand('hexo-one.newPost', function() {
-		const options = {
-			ignoreFocusOut: true,
-			password: false,
-			prompt: "Please type the title of your post"
-			};
-		vscode.window.showInputBox(options).then((value) => {
-			if (value === undefined || value.trim() === '') {
-			vscode.window.showInformationMessage('Please type the title of your post');
-			}else{
-				const title = value.trim();
-				const cmd = "hexo new \"" + title + "\""
-				runCmd(cmd);
-				vscode.window.showInformationMessage('Creating new post: \"' + title + '\" please wait.');
-			}});
+		runPrompt(
+			"Please type the title of your post",
+			'Please type the title of your post',
+			"hexo new \"",
+			'Creating new post: \"'
+		)
 	});
 
 	context.subscriptions.push(pushHexo);
 	context.subscriptions.push(newPost);
+	context.subscriptions.push(newDraft);
 }
 exports.activate = activate;
 
 // this method is called when your extension is deactivated
 function deactivate() {}
+
+function runPrompt(s1, s2, s3, s4) {
+	const options = {
+		ignoreFocusOut: true,
+		password: false,
+		prompt: s1
+		};
+	vscode.window.showInputBox(options).then((value) => {
+		if (value === undefined || value.trim() === '') {
+		vscode.window.showInformationMessage(s2);
+		}else{
+			const title = value.trim();
+			const cmd = s3 + title + "\""
+			runCmd(cmd);
+			vscode.window.showInformationMessage(s4 + title + '\" please wait.');
+		}});
+}
 
 function runCmd(cmd) {
 	const {workspace} = require('vscode');
