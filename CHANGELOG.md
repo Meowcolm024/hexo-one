@@ -5,7 +5,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Able to publish draft
+- Integrrate new Post/Draft/Page
+
+## [0.0.8]
+### Changed
+
+- Now you can publish draft using ```Publish Hexo Draft```
+- More Hexo commands are supported, you can use ```Select Hexo Action```
 
 ## [0.0.7]
 ### Changed

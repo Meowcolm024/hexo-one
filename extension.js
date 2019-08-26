@@ -42,9 +42,41 @@ function activate(context) {
 		)
 	});
 
+	let publishDraft = vscode.commands.registerCommand('hexo-one.publishDraft', function() {
+		runPrompt(
+			"Please type the title of your draft",
+			'Please type the title of your draft',
+			"hexo publish \"",
+			'Publishing draft: \"'
+		)
+	});
+
+	let hexoPrompt = vscode.commands.registerCommand('hexo-one.hexoPrompt', function() {
+		vscode.window.showQuickPick(
+            [
+				"hexo clean",
+				"hexo generate",
+				"hexo deploy"
+            ],
+            {
+                canPickMany:false,
+                ignoreFocusOut:true,
+                matchOnDescription:true,
+                matchOnDetail:true,
+                placeHolder:'Select an action: '
+            })
+            .then(function(msg){
+			vscode.window.showInformationMessage("Executing: " + msg);
+			runCmd(msg);
+            console.log(msg);
+        })
+	});
+
 	context.subscriptions.push(pushHexo);
 	context.subscriptions.push(newPost);
 	context.subscriptions.push(newDraft);
+	context.subscriptions.push(publishDraft);
+	context.subscriptions.push(hexoPrompt);
 }
 exports.activate = activate;
 

@@ -20,7 +20,14 @@ Press ```command + shift + P``` to:
 
 2. __Create New Draft__: insert ```New Hexo Draft``` or use shortcut: ```control + N + D```
 
-3. __Clean, Generate and Deploy__: insert ```Push Hexo``` or use shortcut: ```control + P + H```
+3. __Publish Hexo Draft__: insert ```Publish Hexo Draft```
+
+4. __Clean, Generate and Deploy__: insert ```Push Hexo``` or use shortcut: ```control + P + H```
+
+5. __Other Hexo Actions__: insert ```Select Hexo Action``` then you can select one of the following commands:
+   - `hexo clean`
+   - `hexo generate`
+   - `hexo deploy`
 
 <!--
 1. __Create New Post__: Press ```command + shift + P``` then instert ```New Hexo Post``` or simply using short cut ```control + N + P```. Then a prompt would show up and just type the title of post.
@@ -32,7 +39,7 @@ Press ```command + shift + P``` to:
 
 ## TODO List
 
-* add function of publishing drafts
+* Integrrate new Post/Draft/Page
 
 ## Source and Bug report
 
