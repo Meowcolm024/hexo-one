@@ -24,22 +24,24 @@ function activate(context) {
 		vscode.window.showInformationMessage('Deploying Hexo, please wait...');
 	});
 
-	let newDraft = vscode.commands.registerCommand('hexo-one.newDraft', function() {
-		runPrompt(
-			"Please type the title of your draft",
-			'Please type the title of your draft',
-			"hexo new draft \"",
-			'Creating new draft: \"'
-		)
-	});
-
 	let newPost = vscode.commands.registerCommand('hexo-one.newPost', function() {
-		runPrompt(
-			"Please type the title of your post",
-			'Please type the title of your post',
-			"hexo new \"",
-			'Creating new post: \"'
-		)
+		vscode.window.showQuickPick(
+            [
+				"post",
+				"draft",
+				"page"
+            ],
+            {
+                canPickMany:false,
+                ignoreFocusOut:true,
+                matchOnDescription:true,
+                matchOnDetail:true,
+                placeHolder:'Select the type of the post you want to create'
+            })
+            .then(function(msg){
+			createPost(msg);
+            console.log(msg);
+        })
 	});
 
 	let publishDraft = vscode.commands.registerCommand('hexo-one.publishDraft', function() {
@@ -74,7 +76,6 @@ function activate(context) {
 
 	context.subscriptions.push(pushHexo);
 	context.subscriptions.push(newPost);
-	context.subscriptions.push(newDraft);
 	context.subscriptions.push(publishDraft);
 	context.subscriptions.push(hexoPrompt);
 }
@@ -82,6 +83,26 @@ exports.activate = activate;
 
 // this method is called when your extension is deactivated
 function deactivate() {}
+
+function createPost(content) {
+	var msg1 = "Please type the title of your " + content
+	var msg2 = "hexo new " + content + " \""
+	const options = {
+		ignoreFocusOut: true,
+		password: false,
+		prompt: msg1
+		};
+	vscode.window.showInputBox(options).then((value) => {
+		if (value === undefined || value.trim() === '') {
+		vscode.window.showInformationMessage(msg1);
+		}else{
+			const title = value.trim();
+			const cmd = msg2 + title + "\""
+			runCmd(cmd);
+			//vscode.window.showInformationMessage(cmd);
+			vscode.window.showInformationMessage('Creating new '+ content + ': \"' + title + '\" please wait.');
+		}});
+}
 
 function runPrompt(s1, s2, s3, s4) {
 	const options = {

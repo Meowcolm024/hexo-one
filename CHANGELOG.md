@@ -5,7 +5,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Integrrate new Post/Draft/Page
+- Nothing
+
+## [0.0.9]
+### Changed
+
+- removed ```New Hexo Draft```
+- command ```New Hexo Post``` is modified, now you can select what type of post you want create
 
 ## [0.0.8]
 ### Changed
