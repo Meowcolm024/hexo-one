@@ -24,6 +24,7 @@ function activate(context) {
 		vscode.window.showInformationMessage('Deploying Hexo, please wait...');
 	});
 
+	// generate new post
 	let newPost = vscode.commands.registerCommand('hexo-one.newPost', function() {
 		vscode.window.showQuickPick(
             [
@@ -44,6 +45,7 @@ function activate(context) {
         })
 	});
 
+	// publish draft
 	let publishDraft = vscode.commands.registerCommand('hexo-one.publishDraft', function() {
 		runPrompt(
 			"Please type the title of your draft",
@@ -53,6 +55,7 @@ function activate(context) {
 		)
 	});
 
+	// other functions
 	let hexoPrompt = vscode.commands.registerCommand('hexo-one.hexoPrompt', function() {
 		vscode.window.showQuickPick(
             [
@@ -74,10 +77,18 @@ function activate(context) {
         })
 	});
 
+	// start hexo server
+	let hexoServer = vscode.commands.registerCommand('hexo-one.hexoServer', function() {
+		let terminal = vscode.window.createTerminal("Hexo Server");
+		terminal.sendText("hexo s");
+		terminal.show();
+	});
+
 	context.subscriptions.push(pushHexo);
 	context.subscriptions.push(newPost);
 	context.subscriptions.push(publishDraft);
 	context.subscriptions.push(hexoPrompt);
+	context.subscriptions.push(hexoServer);
 }
 exports.activate = activate;
 

@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"icon": "images/spellIcon.png",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
@@ -20,7 +20,8 @@
 		"onCommand:hexo-one.pushHexo",
 		"onCommand:hexo-one.newPost",
 		"onCommand:hexo-one.publishDraft",
-		"onCommand:hexo-one.hexoPrompt"
+		"onCommand:hexo-one.hexoPrompt",
+		"onCommand:hexo-one.hexoServer"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -40,6 +41,10 @@
 			{
 				"command": "hexo-one.hexoPrompt",
 				"title": "Select Hexo Action"
+			},
+			{
+				"command": "hexo-one.hexoServer",
+				"title": "Start Hexo server"
 			}
 		],
 		"keybindings": [

@@ -28,6 +28,8 @@ Press ```command + shift + P``` to:
    - `hexo generate`
    - `hexo deploy`
 
+5. __Start Hexo Server__: insert ```Start Hexo server```
+
 ## TODO List
 
 * Nothing

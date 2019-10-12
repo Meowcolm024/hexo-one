@@ -8,6 +8,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Nothing
 
 ## [0.0.9]
+### Added
+
+- you can start hexo server using ```Start Hexo server```
+
+## [0.0.9]
 ### Changed
 
 - removed ```New Hexo Draft```
