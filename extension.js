@@ -47,12 +47,20 @@ function activate(context) {
 
 	// publish draft
 	let publishDraft = vscode.commands.registerCommand('hexo-one.publishDraft', function() {
-		runPrompt(
-			"Please type the title of your draft",
-			'Please type the title of your draft',
-			"hexo publish \"",
-			'Publishing draft: \"'
-		)
+		const options = {
+			ignoreFocusOut: true,
+			password: false,
+			prompt: "Please type the title of your draft"
+			};
+		vscode.window.showInputBox(options).then((value) => {
+			if (value === undefined || value.trim() === '') {
+			vscode.window.showInformationMessage('Please type the title of your draft');
+			}else{
+				const title = value.trim();
+				const cmd = "hexo publish \"" + title + "\""
+				runCmd(cmd);
+				vscode.window.showInformationMessage('Publishing draft: \"' + title + '\" please wait.');
+			}});
 	});
 
 	// other functions
@@ -115,27 +123,10 @@ function createPost(content) {
 		}});
 }
 
-function runPrompt(s1, s2, s3, s4) {
-	const options = {
-		ignoreFocusOut: true,
-		password: false,
-		prompt: s1
-		};
-	vscode.window.showInputBox(options).then((value) => {
-		if (value === undefined || value.trim() === '') {
-		vscode.window.showInformationMessage(s2);
-		}else{
-			const title = value.trim();
-			const cmd = s3 + title + "\""
-			runCmd(cmd);
-			vscode.window.showInformationMessage(s4 + title + '\" please wait.');
-		}});
-}
-
 function runCmd(cmd) {
 	const {workspace} = require('vscode');
 	const options = {
-        cwd: workspace.rootPath,
+        cwd: workspace.workspaceFolders[0].uri.path,
         env: process.env
     }
 	const { exec } = require('child_process');

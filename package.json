@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"icon": "images/spellIcon.png",
 	"publisher": "Meowcolm024",
 	"license": "MIT",

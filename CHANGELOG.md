@@ -7,7 +7,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Nothing
 
-## [0.0.9]
+## [0.0.11]
+### Changed
+
+- fixed some deprecated code
+
+## [0.0.10]
 ### Added
 
 - you can start hexo server using ```Start Hexo server```
