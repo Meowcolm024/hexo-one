@@ -31,10 +31,8 @@ Press ```command + shift + P``` to:
 
 ## Demo
 
-<figure>
-    <img src="images/sh.gif" alt= "Creating new post">
-    <figcaption>Creating new post</figcaption>
-</figure>
+![Creating new post](images/sh2.gif)
+*Creating new post*
 
 ## TODO List
 
