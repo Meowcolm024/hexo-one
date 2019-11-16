@@ -7,6 +7,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Nothing
 
+## [0.1.0]
+### Changed
+
+- `Push Hexo` command now shows in the *Integrated Ternimal*
+
 ## [0.0.11]
 ### Changed
 

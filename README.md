@@ -29,6 +29,13 @@ Press ```command + shift + P``` to:
 
 5. __Start Hexo Server__: insert ```Start Hexo server```
 
+## Demo
+
+<figure>
+    <img src="images/sh.gif" alt= "Creating new post">
+    <figcaption>Creating new post</figcaption>
+</figure>
+
 ## TODO List
 
 - Nothing

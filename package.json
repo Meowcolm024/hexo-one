@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.0.11",
+	"version": "0.1.0",
 	"icon": "images/spellIcon.png",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
@@ -25,8 +25,7 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [
-			{
+		"commands": [{
 				"command": "hexo-one.pushHexo",
 				"title": "Push Hexo"
 			},
@@ -47,8 +46,7 @@
 				"title": "Start Hexo server"
 			}
 		],
-		"keybindings": [
-			{
+		"keybindings": [{
 				"command": "hexo-one.pushHexo",
 				"key": "ctrl+p ctrl+h"
 			},
