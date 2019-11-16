@@ -7,7 +7,7 @@
 
 Download the extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=Meowcolm024.hexo-one)
 
-A simple extension for easier __Hexo__ usage. Allowing users to
+A simple extension that makes __Hexo__ easier to use. Allowing users to
  clean, generate and deploy the hexo project with just a single action.
 
 It just makes life easier :)

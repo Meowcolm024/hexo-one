@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://meowcolm024.visualstudio.com/DefaultCollection/VSCode%20Extension/_git/hexo-one"
+		"url": "https://github.com/Meowcolm024/hexo-one"
 	},
 	"engines": {
 		"vscode": "^1.30.0"
