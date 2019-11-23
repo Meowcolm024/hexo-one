@@ -19,7 +19,7 @@ function activate(context) {
 	// The commandId parameter must match the command field in package.json
 	let pushHexo = vscode.commands.registerCommand('hexo-one.pushHexo', function () {
 		let terminal = vscode.window.createTerminal("Deploy Hexo");
-		terminal.sendText('hexo clean \n hexo g \n hexo d');
+		terminal.sendText('hexo clean && hexo g && hexo d');
 		terminal.show();
 		vscode.window.showInformationMessage('Deploying Hexo, please wait...');
 	});
