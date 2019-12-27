@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"icon": "images/spellIcon.png",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
@@ -17,6 +17,7 @@
 		"Other"
 	],
 	"activationEvents": [
+		"workspaceContains:source/_posts",
 		"onCommand:hexo-one.pushHexo",
 		"onCommand:hexo-one.newPost",
 		"onCommand:hexo-one.publishDraft",
@@ -27,23 +28,45 @@
 	"contributes": {
 		"commands": [{
 				"command": "hexo-one.pushHexo",
-				"title": "Push Hexo"
+				"title": "Push Hexo",
+				"category": "Hexo"
 			},
 			{
 				"command": "hexo-one.newPost",
-				"title": "New Hexo Post"
+				"title": "New Hexo Post",
+				"category": "Hexo"
 			},
 			{
 				"command": "hexo-one.publishDraft",
-				"title": "Publish Hexo Draft"
+				"title": "Publish Hexo Draft",
+				"category": "Hexo"
 			},
 			{
 				"command": "hexo-one.hexoPrompt",
-				"title": "Select Hexo Action"
+				"title": "Select Hexo Action",
+				"category": "Hexo"
 			},
 			{
 				"command": "hexo-one.hexoServer",
-				"title": "Start Hexo server"
+				"title": "Start Hexo server",
+				"category": "Hexo"
+			}
+		],
+		"configuration": [
+			{
+				"title": "hexo-one",
+				"properties": {
+					"hexo-one.showCreateNewPostButton": {
+						"type": "boolean",
+						"default": true,
+						"description": "Show the New Post button"
+					},
+					"hexo-one.showDeployHexoButton": {
+						"type": "boolean",
+						"default": true,
+						"description": "Show the Deploy Hexo button"
+					}
+				}
 			}
 		],
 		"keybindings": [{

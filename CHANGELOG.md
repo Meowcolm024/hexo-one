@@ -5,6 +5,11 @@ All notable changes to the "hexo-one" extension will be documented in this file.
 
 - Nothing
 
+## [0.1.1]
+### Added
+
+- Added buttons for `New Post` and `Deploy Hexo`
+
 ## [0.1.0]
 ### Changed
 

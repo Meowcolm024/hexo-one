@@ -2,6 +2,9 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 
+const postbtn = vscode.workspace.getConfiguration().get('hexo-one.showCreateNewPostButton');
+const pushbtn = vscode.workspace.getConfiguration().get('hexo-one.showDeployHexoButton');
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
@@ -89,6 +92,22 @@ function activate(context) {
 		terminal.sendText("hexo s");
 		terminal.show();
 	});
+
+	if (postbtn) {
+		let stat = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 10);
+		stat.text = "New Post"
+		stat.command = 'hexo-one.newPost'
+		stat.show()
+		context.subscriptions.push(stat);
+	}
+
+	if (pushbtn) {
+		let stat = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 10);
+		stat.text = "Deploy Hexo"
+		stat.command = 'hexo-one.pushHexo'
+		stat.show()
+		context.subscriptions.push(stat);
+	}
 
 	context.subscriptions.push(pushHexo);
 	context.subscriptions.push(newPost);
