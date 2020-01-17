@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"icon": "images/spellIcon.png",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
@@ -65,6 +65,11 @@
 						"type": "boolean",
 						"default": true,
 						"description": "Show the Deploy Hexo button"
+					},
+					"hexo-one.hexoServerArguments": {
+						"type": "string",
+						"default": "",
+						"description": "Arguments passed to Hexo Server"
 					}
 				}
 			}

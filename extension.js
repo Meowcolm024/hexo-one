@@ -42,6 +42,9 @@ function activate(context) {
 					placeHolder: 'Select the type of the post you want to create'
 				})
 			.then(function (msg) {
+				if (msg === undefined || msg.trim() === '') {
+					return;
+				};
 				createPost(msg);
 				console.log(msg);
 			})
@@ -80,6 +83,9 @@ function activate(context) {
 					placeHolder: 'Select an action: '
 				})
 			.then(function (msg) {
+				if (msg === undefined || msg.trim() === '') {
+					return;
+				};
 				vscode.window.showInformationMessage("Executing: " + msg);
 				runCmd(msg);
 				console.log(msg);
@@ -88,8 +94,9 @@ function activate(context) {
 
 	// start hexo server
 	let hexoServer = vscode.commands.registerCommand('hexo-one.hexoServer', function () {
+		const args = vscode.workspace.getConfiguration().get('hexo-one.hexoServerArguments');
 		let terminal = vscode.window.createTerminal("Hexo Server");
-		terminal.sendText("hexo s");
+		terminal.sendText("hexo s " + args);
 		terminal.show();
 	});
 

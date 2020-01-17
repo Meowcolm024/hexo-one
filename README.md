@@ -31,7 +31,7 @@ Press ```command + shift + P``` to:
 ## Demo
 
 ![Creating new post](images/sh2.gif)
-*Creating new post*
+*Creating new post (Old Ver ==)*
 
 ## TODO List
 

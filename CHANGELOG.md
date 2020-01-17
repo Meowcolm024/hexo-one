@@ -5,6 +5,15 @@ All notable changes to the "hexo-one" extension will be documented in this file.
 
 - Nothing
 
+## [0.1.2]
+### Changed
+
+- Bug fix for `New Post` and `Hexo Action`
+
+### Added
+
+- You can pass arguments to `Hexo Server`
+
 ## [0.1.1]
 ### Added
 
