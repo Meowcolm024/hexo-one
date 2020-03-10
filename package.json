@@ -2,7 +2,7 @@
 	"name": "hexo-one",
 	"displayName": "hexo-one",
 	"description": "Making hexo easier to use",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"icon": "images/spellIcon.png",
 	"publisher": "Meowcolm024",
 	"license": "MIT",
@@ -22,7 +22,8 @@
 		"onCommand:hexo-one.newPost",
 		"onCommand:hexo-one.publishDraft",
 		"onCommand:hexo-one.hexoPrompt",
-		"onCommand:hexo-one.hexoServer"
+		"onCommand:hexo-one.hexoServer",
+		"onCommand:hexo-one.publishCurrentFile"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -50,30 +51,33 @@
 				"command": "hexo-one.hexoServer",
 				"title": "Start Hexo server",
 				"category": "Hexo"
+			},
+			{
+				"command": "hexo-one.publishCurrentFile",
+				"title": "Publish Current Draft",
+				"category": "Hexo"
 			}
 		],
-		"configuration": [
-			{
-				"title": "hexo-one",
-				"properties": {
-					"hexo-one.showCreateNewPostButton": {
-						"type": "boolean",
-						"default": true,
-						"description": "Show the New Post button"
-					},
-					"hexo-one.showDeployHexoButton": {
-						"type": "boolean",
-						"default": true,
-						"description": "Show the Deploy Hexo button"
-					},
-					"hexo-one.hexoServerArguments": {
-						"type": "string",
-						"default": "",
-						"description": "Arguments passed to Hexo Server"
-					}
+		"configuration": [{
+			"title": "hexo-one",
+			"properties": {
+				"hexo-one.showCreateNewPostButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show the New Post button"
+				},
+				"hexo-one.showDeployHexoButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show the Deploy Hexo button"
+				},
+				"hexo-one.hexoServerArguments": {
+					"type": "string",
+					"default": "",
+					"description": "Arguments passed to Hexo Server"
 				}
 			}
-		],
+		}],
 		"keybindings": [{
 				"command": "hexo-one.pushHexo",
 				"key": "ctrl+p ctrl+h"

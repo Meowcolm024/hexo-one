@@ -19,14 +19,16 @@ Press ```command + shift + P``` to:
 
 2. __Publish Hexo Draft__: insert ```Publish Hexo Draft```
 
-3. __Clean, Generate and Deploy__: insert ```Push Hexo``` or use shortcut: ```control + P + H```
+3. __Publish Current Draft__: insert `Publish Current Draft`
 
-4. __Other Hexo Actions__: insert ```Select Hexo Action``` then you can select one of the following commands:
+4. __Clean, Generate and Deploy__: insert ```Push Hexo``` or use shortcut: ```control + P + H```
+
+5. __Other Hexo Actions__: insert ```Select Hexo Action``` then you can select one of the following commands:
    - `hexo clean`
    - `hexo generate`
    - `hexo deploy`
 
-5. __Start Hexo Server__: insert ```Start Hexo server```
+6. __Start Hexo Server__: insert ```Start Hexo server```
 
 ## Demo
 

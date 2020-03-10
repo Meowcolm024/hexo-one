@@ -51,7 +51,7 @@ function activate(context) {
 	});
 
 	// publish draft
-	let publishDraft = vscode.commands.registerCommand('hexo-one.publishDraft', function() {
+	let publishDraft = vscode.commands.registerCommand('hexo-one.publishDraft', function () {
 		const options = {
 			ignoreFocusOut: true,
 			password: false,
@@ -65,7 +65,8 @@ function activate(context) {
 				const cmd = "hexo publish \"" + title + "\""
 				runCmd(cmd);
 				vscode.window.showInformationMessage('Publishing draft: \"' + title + '\" please wait.');
-			}});
+			}
+		});
 	});
 
 	// other functions
@@ -100,6 +101,14 @@ function activate(context) {
 		terminal.show();
 	});
 
+	let pubCurrent = vscode.commands.registerCommand('hexo-one.publishCurrentFile', function () {
+		let file = vscode.window.activeTextEditor.document;
+		let name = file.lineAt(1).text.replace(/title: /, '');
+		//vscode.window.showInformationMessage(name);
+		runCmd('hexo publish "' + name + '"');
+		vscode.window.showInformationMessage("Publishing draft: " + name);
+	})
+
 	if (postbtn) {
 		let stat = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 10);
 		stat.text = "New Post"
@@ -121,6 +130,7 @@ function activate(context) {
 	context.subscriptions.push(publishDraft);
 	context.subscriptions.push(hexoPrompt);
 	context.subscriptions.push(hexoServer);
+	context.subscriptions.push(pubCurrent);
 }
 exports.activate = activate;
 

@@ -5,6 +5,11 @@ All notable changes to the "hexo-one" extension will be documented in this file.
 
 - Nothing
 
+## [0.1.3]
+### Added
+
+- You can now publish current draft aticle easily.
+
 ## [0.1.2]
 ### Changed
 
